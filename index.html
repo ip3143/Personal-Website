@@ -13,12 +13,14 @@
             <div class = "container">
                 <nav>
                     <!-- <img src = "images/logo.jpg" class = "logo"> -->
-                    <ul>
+                    <ul id="sidemenu">
                         <li><a href = "#header"> Home </a></li>
                         <li><a href = "#about"> About </a></li>
                         <li><a href = "#projects"> Projects </a></li>
                         <li><a href = "#contact/socials"> Contact </a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
                     <p>CPEN student at UBC</p>
@@ -72,20 +74,21 @@
                 <div class = "projects-list">
                     <div>
                         <i class="fa-solid fa-cloud"></i>
-                        <h2>Too be posted soon...</h2>
-                        <p></p>
-                        <a href = "#">Click Here</a>
+                        <h2>Weather App</h2>
+                        <p>Weather app using JavaScript & a React.js backend - to be merged with a Japan tour guide</p>
+                        <a href = "https://github.com/ip3143/Japan-Weather-App">Click Here</a>
                     </div>
                     <div>
-                            <h2>Project 2</h2>
-                            <p></p>
-                            <a href = "#">Click Here</a>
+                        <i class="fa-solid fa-gamepad"></i>
+                            <h2>Treasure Hunter</h2>
+                            <p>Open the treasure chests as fast as you can - simple 2D game using Java</p>
+                            <a href = "https://github.com/ip3143/Treasure-Hunter">Click Here</a>
                     </div>
-                    <div>
+                    <!-- <div>
                             <h2>Project 3</h2>
                             <p></p>
                             <a href = "#">Click Here</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -115,6 +118,16 @@
                     }
                     event.currentTarget.classList.add("active-link");
                     document.getElementById(tabname).classList.add("active-tab")
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+
+                function openmenu() {
+                    sidemenu.style.right = "0";
+                }
+                function closemenu() {
+                    sidemenu.style.right = "-200px";
                 }
             </script>
     </body>
